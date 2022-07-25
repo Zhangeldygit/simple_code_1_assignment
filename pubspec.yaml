@@ -1,0 +1,38 @@
+name: simple_code_1_assignment
+description: A new Flutter project.
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.5 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.17.0
+  flutter_svg: ^1.0.3
+  shared_preferences: ^2.0.15
+  provider: ^6.0.3
+  http: ^0.13.4
+  flutter_bloc: ^8.0.1
+  dio: ^4.0.6
+  equatable: ^2.0.3
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/svg/
+    - assets/images/bitmap/
+
+flutter_intl:
+  enabled: true

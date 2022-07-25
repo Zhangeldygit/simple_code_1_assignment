@@ -1,0 +1,49 @@
+{
+	"@personsTotal": {
+		"placeholders": {
+			"total": {}
+		}
+	},
+	"@inputErrorLoginIsShorterThan": {
+		"placeholders": {
+			"min": {}
+		}
+	},
+	"@inputErrorPasswordIsShorterThan": {
+		"placeholders": {
+			"min": {}
+		}
+	},
+	"auth": "Authorization",
+	"login": "Login",
+	"password": "Password",
+	"inputErrorCheckLogin": "Check login",
+	"inputErrorLoginIsShorterThan": "Login must contain more than {min} symbols",
+	"inputErrorCheckPassword": "Check password",
+	"inputErrorPasswordIsShorterThan": "Password must contain more than {min} symbols",
+	"tryAgain": "Try again",
+	"close": "Close",
+	"signIn": "Sign in",
+	"language": "Language",
+	"english": "English",
+	"russian": "Russian",
+	"noData": "No data",
+	"dead": "Dead",
+	"alive": "Alive",
+	"findPerson": "Find a person",
+	"personsTotal": "Total persons: {total}",
+	"dontHaveAnAccountHint": "Don't have an account yet",
+	"create": "Create",
+	"error": "Error",
+	"wrongLoginOrPassword": "Wrong login or password",
+	"ok": "Ok",
+	"settings": "Settings",
+	"products": "Products",
+	"female": "Female",
+	"personsListIsEmpty": "No persons found",
+	"somethingWentWrong": "Something went wrong :-(",
+	"sort" : "Sort",
+	"price" : "Price",
+	"rating": "Rating",
+	"productDetails" : "Product Details"
+}

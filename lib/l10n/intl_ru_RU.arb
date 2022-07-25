@@ -1,0 +1,51 @@
+{
+	"@personsTotal": {
+		"placeholders": {
+			"total": {}
+		}
+	},
+	"@inputErrorLoginIsShorterThan": {
+		"placeholders": {
+			"min": {}
+		}
+	},
+	"@inputErrorPasswordIsShorterThan": {
+		"placeholders": {
+			"min": {}
+		}
+	},
+	"auth": "Авторизация",
+	"login": "Логин",
+	"password": "Пароль",
+	"inputErrorCheckLogin": "Проверьте логин",
+	"inputErrorLoginIsShorterThan": "Логин должен содержать не менее {min} символов",
+	"inputErrorCheckPassword": "Проверьте пароль",
+	"inputErrorPasswordIsShorterThan": "Пароль должен содержать не менее {min} символов",
+	"tryAgain": "Попробуйте снова",
+	"close": "Закрыть",
+	"signIn": "Вход",
+	"language": "Язык",
+	"english": "Английский",
+	"russian": "Русский",
+	"noData": "Нет данных",
+	"dead": "Мертвый",
+	"alive": "Живой",
+	"findPerson": "Найти персонажа",
+	"personsTotal": "Всего персонажей: {total}",
+	"dontHaveAnAccountHint": "Ещё нет аккаунта",
+	"create": "Создать",
+	"error": "Ошибка",
+	"wrongLoginOrPassword": "Введен неверный логин или пароль",
+	"ok": "Ok",
+	"settings": "Настройки",
+	"products": "Продукты",
+	"man": "Человек",
+	"male": "Мужской",
+	"female": "Женский",
+	"personsListIsEmpty": "Персонажей не найдено",
+	"somethingWentWrong": "Что-то пошло не так :-(",
+	"sort" : "Сортировка",
+	"price" : "Цена",
+	"rating": "Рейтинг",
+	"productDetails" : "Инфо о продукте"
+}
