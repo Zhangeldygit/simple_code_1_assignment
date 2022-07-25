@@ -4,6 +4,7 @@ import 'package:simple_code_1_assignment/ui/products_list/widgets/single_product
 import 'package:simple_code_1_assignment/widgets/app_bar.dart';
 
 import '../../bloc/products/bloc_products.dart';
+import '../../constants/app_styles.dart';
 import '../../dto/product.dart';
 import '../../generated/l10n.dart';
 import '../../widgets/app_nav_bar.dart';
@@ -52,20 +53,26 @@ class _ProductsListScreenState extends State<ProductsListScreen> {
         bottomNavigationBar: const AppNavBar(current: 0),
         body: Column(
           children: [
-            DropdownButton(
-              value: firstDropDownValue,
-                items: sortItems.map((String sortItem) {
-                  return DropdownMenuItem(
-                    value: sortItem,
-                    child: Text(sortItem),
-                  );
-                }).toList(),
-                onChanged: (String? value){
-                  setState((){
-                    firstDropDownValue = value!;
-                  });
-                  context.read<BlocProducts>().add(EventFetchProducts(value!));
-                }
+            Row(
+             mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                 Text("${S.of(context).sort}: ",style: AppStyles.s16w400,),
+                DropdownButton(
+                  value: firstDropDownValue,
+                    items: sortItems.map((String sortItem) {
+                      return DropdownMenuItem(
+                        value: sortItem,
+                        child: Text(sortItem),
+                      );
+                    }).toList(),
+                    onChanged: (String? value){
+                      setState((){
+                        firstDropDownValue = value!;
+                      });
+                      context.read<BlocProducts>().add(EventFetchProducts(value!));
+                    }
+                ),
+              ],
             ),
             const Divider(thickness: 2,),
             Padding(
@@ -73,40 +80,40 @@ class _ProductsListScreenState extends State<ProductsListScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
-                    children: [
-                      Text('Category:'),
-                      DropdownButton(
-                          value: secondDropDownValue,
-                          items: categoryItems.map((String category) {
-                            return DropdownMenuItem(
-                              value: category,
-                              child: Text(category),
-                            );
-                          }).toList(),
-                          onChanged: (String? value){
-                            setState((){
-                              secondDropDownValue = value!;
-                            });
-                            context.read<BlocProducts>().add(EventCategoryFilter(value!));
-                          }
-                      ),
-                    ],
-                  ),
                   DropdownButton(
-                      value: thirdDropDownValue,
-                      items: ratingItems.map((String rating) {
+                      value: secondDropDownValue,
+                      items: categoryItems.map((String category) {
                         return DropdownMenuItem(
-                          value: rating,
-                          child: Text(rating),
+                          value: category,
+                          child: Text(category),
                         );
                       }).toList(),
                       onChanged: (String? value){
                         setState((){
-                          thirdDropDownValue = value!;
+                          secondDropDownValue = value!;
                         });
-                        context.read<BlocProducts>().add(EventRatingFilter(value!));
+                        context.read<BlocProducts>().add(EventCategoryFilter(value!));
                       }
+                  ),
+                  Row(
+                    children: [
+                       Text("${S.of(context).rating}: ", style: AppStyles.s16w400,),
+                      DropdownButton(
+                          value: thirdDropDownValue,
+                          items: ratingItems.map((String rating) {
+                            return DropdownMenuItem(
+                              value: rating,
+                              child: Text(rating),
+                            );
+                          }).toList(),
+                          onChanged: (String? value){
+                            setState((){
+                              thirdDropDownValue = value!;
+                            });
+                            context.read<BlocProducts>().add(EventRatingFilter(value!));
+                          }
+                      ),
+                    ],
                   ),
                 ],
               ),
