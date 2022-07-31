@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:simple_code_1_assignment/ui/products_list/widgets/single_product_screen.dart';
 import 'package:simple_code_1_assignment/widgets/app_bar.dart';
 
@@ -62,7 +63,7 @@ class _ProductsListScreenState extends State<ProductsListScreen> {
                     items: sortItems.map((String sortItem) {
                       return DropdownMenuItem(
                         value: sortItem,
-                        child: Text(sortItem),
+                        child: Text(sortItem,style: AppStyles.s16w400),
                       );
                     }).toList(),
                     onChanged: (String? value){
@@ -74,9 +75,9 @@ class _ProductsListScreenState extends State<ProductsListScreen> {
                 ),
               ],
             ),
-            const Divider(thickness: 2,),
+             Divider(thickness: 2.h),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
+              padding:  EdgeInsets.symmetric(horizontal: 16.w),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -85,7 +86,7 @@ class _ProductsListScreenState extends State<ProductsListScreen> {
                       items: categoryItems.map((String category) {
                         return DropdownMenuItem(
                           value: category,
-                          child: Text(category),
+                          child: Text(category,style: AppStyles.s16w400,),
                         );
                       }).toList(),
                       onChanged: (String? value){
@@ -103,7 +104,7 @@ class _ProductsListScreenState extends State<ProductsListScreen> {
                           items: ratingItems.map((String rating) {
                             return DropdownMenuItem(
                               value: rating,
-                              child: Text(rating),
+                              child: Text(rating,style: AppStyles.s16w400),
                             );
                           }).toList(),
                           onChanged: (String? value){
@@ -136,7 +137,7 @@ class _ProductsListScreenState extends State<ProductsListScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Flexible(
-                          child: Text(state.error),
+                          child: Text(state.error, style: AppStyles.s16w400),
                         ),
                       ],
                     );

@@ -11,10 +11,10 @@ class _ListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-      padding: const EdgeInsets.only(
-        top: 12.0,
-        left: 12.0,
-        right: 12.0,
+      padding:  EdgeInsets.only(
+        top: 12.0.h,
+        left: 12.0.w,
+        right: 12.0.w,
       ),
       itemCount: productsList.length,
       itemBuilder: (context, index) {
@@ -25,7 +25,7 @@ class _ListView extends StatelessWidget {
           },
         );
       },
-      separatorBuilder: (context, _) => const SizedBox(height: 26.0),
+      separatorBuilder: (context, _) =>  SizedBox(height: 11.0.h),
     );
   }
 }

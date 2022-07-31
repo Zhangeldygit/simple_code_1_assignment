@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../constants/app_colors.dart';
 import '../../../constants/app_styles.dart';
@@ -12,18 +13,6 @@ class PersonListTile extends StatelessWidget {
 
   final Product product;
 
-  Color _statusColor(String? status) {
-    if (status == 'Dead') return Colors.red;
-    if (status == 'Alive') return const Color(0xff00c48c);
-    return Colors.grey;
-  }
-
-  String _statusLabel(String? status) {
-    if (status == 'Dead') return S.current.dead;
-    if (status == 'Alive') return S.current.alive;
-    return S.current.noData;
-  }
-
   @override
   Widget build(BuildContext context) {
     return  Card(
@@ -32,7 +21,7 @@ class PersonListTile extends StatelessWidget {
       child: ListTile(
         leading: CircleIcon(
           "${product.id}",
-          margin: const EdgeInsets.only(right: 20.0),
+          margin:  EdgeInsets.only(right: 20.0.h),
         ),
         title:  Text(
           product.title ?? S.of(context).noData,
